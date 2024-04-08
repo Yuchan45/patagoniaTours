@@ -1,0 +1,374 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+:root {
+  --white: #ffffffeb;
+  --dark-gray: #111111;
+  --ligth-gray: #313134;
+  --ligther-gray: #797979;
+  --bg-gray: #202023;
+  --sunset-orange: #ffa674;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.patagonia-tours {
+  font-size: 25px;
+}
+
+.main-container {
+  position: relative;
+}
+
+.main-container header {
+  height: 150px;
+  width: 100vw;
+  position: fixed;
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  transition: .3s ease;
+}
+
+.active-header {
+  height: 80px !important;
+  transition: .3s ease;
+}
+
+.main-container header ul {
+  width: 35vw;
+  height: inherit;
+  margin: auto;
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.main-container header ul li a {
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--white);
+  transition: .3s ease;
+}
+
+.main-container header ul li a:hover{
+  color: var(--sunset-orange);
+}
+
+.main-container .banner {
+  width: 100vw;
+  height: 90vh;
+  background-image:url(../images/banners/Fitzroy2.jpg);
+  background-size: cover;
+}
+
+.main-container .banner-overlay {
+  width: 100vw;
+  height: 90vh;
+  position: absolute;
+  /* background-color: var(--bg-gray); */
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(32,32,35,1) 100%);
+  opacity: .5;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: flex-end;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.main-container .logo-overlay {
+  width: 100vw;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.main-container .logo-overlay img {
+  width: 15vw;
+}
+
+.destinations {
+  width: 100vw;
+  background-color: var(--bg-gray);
+  padding: 100px 200px;
+}
+
+.destinations .section-title {
+
+}
+
+.section-title > h3 {
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+}
+
+.section-title > p {
+  color: gray;
+  font-size: 1rem;
+}
+
+.section-title > p > span {
+  color: var(--sunset-orange);
+}
+
+.destinations .destinations-grid {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  margin: 25px 0;
+}
+
+#item-first {
+  background-image: url(../images/destinations/bigIce.jpg);
+}
+
+#item-second {
+  background-image: url(../images/destinations/chorrillo_de_salto.jpg);
+}
+
+#item-third {
+  background-image: url(../images/destinations/lago-del-desierto.jpg);
+}
+
+#item-fourth {
+  background-image: url(../images/destinations/laguna-capri.jpg);
+}
+
+#item-fith {
+  background-image: url(../images/destinations/laguna-de-los-tres.jpg);
+}
+
+#item-sixth {
+  background-image: url(../images/destinations/loma-del-pliegue-tumbado.jpg);
+}
+
+
+.destinations .destinations-grid .item {
+  position: relative;
+  background-size: cover;
+  width: 50%;
+  height: 450px;
+  margin-top: 15px;
+}
+
+.destinations .destinations-grid .item .item-overlay {
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(32,32,35,1) 100%);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  /* opacity: .5; */
+  transition: 0.5s ease;
+}
+
+.destinations .destinations-grid .item .item-overlay:hover {
+  opacity: .5;
+}
+
+.destinations .destinations-grid .item .item-data {
+  position: absolute;
+  width: 100%;
+  padding: 0 25px;
+  color: var(--white);
+  height: 90px;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.destinations .destinations-grid .item .item-data .name {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.item-data .name > h1 {
+
+}
+
+.item-data .name > p {
+  color: var(--white)
+}
+
+.destinations .destinations-grid .item .item-data .dificulty {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.dificulty .dificulty-indicator {
+  padding: 8px;
+  background-color: orange;
+  border-radius: 25px;
+}
+
+.dificulty .dificulty-indicator > h3 {
+  font-size: .8rem;
+}
+
+
+
+.about-us {
+  width: 100vw;
+  background-color: var(--bg-gray);
+  padding: 100px 200px;
+}
+
+.about-us .container {
+  margin: 25px 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.about-us .container .information {
+  height: 100%;
+  max-width: 800px;
+}
+
+.about-us .container .information > p {
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.about-us .container > img {
+  width: 500px;
+}
+
+.mission-vision-values {
+  width: 100%;
+  background-color: var(--bg-gray);
+  display: flex;
+  gap: 10px;
+}
+
+.mission-vision-values div {
+  width: 33%;
+  height: 300px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.mission-vision-values div > p > span {
+  color: #67e5d5;
+}
+
+.mission-vision-values .mission {
+  background-color: #1d62a3;
+}
+
+.mission-vision-values .vision {
+  background-color: #ffa500;
+}
+
+.mission-vision-values .values {
+  background-color: #3e6d31;
+}
+
+.mission-vision-values > p {
+  
+}
+
+
+
+
+
+
+
+
+
+footer {
+  width: 100vw;
+  height: 200px;
+  background-color: var(--ligth-gray);
+  display: flex;
+}
+
+footer .left {
+  width: 50%;
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+
+footer .left > img {
+  width: 200px;
+}
+
+footer .left > p {
+  color: white;
+  max-width: 600px;
+}
+
+footer .rigth {
+  width: 50%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-end;
+  color: white;
+}
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 319px) {
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+
+}
+
+@media only screen and (min-width: 480px) and  (max-width: 768px) {
+
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px)  {
+
+}
