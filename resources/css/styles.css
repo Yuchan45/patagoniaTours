@@ -25,6 +25,7 @@ html {
 
 .main-container {
   position: relative;
+  background-color: #202023;
 }
 
 .main-container header {
@@ -107,9 +108,6 @@ html {
   padding: 100px 200px;
 }
 
-.destinations .section-title {
-
-}
 
 .section-title > h3 {
   color: white;
@@ -308,7 +306,11 @@ html {
   
 }
 
-
+.review .section-title {
+  margin: 0 0 50px;
+  position: relative;
+  z-index: 10;
+}
 
 
 
