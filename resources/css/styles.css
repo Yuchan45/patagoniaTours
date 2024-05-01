@@ -80,7 +80,7 @@ html {
   position: absolute;
   /* background-color: var(--bg-gray); */
   background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(32,32,35,1) 100%);
-  opacity: .5;
+  opacity: .7;
   display: flex;
   flex-wrap: nowrap;
   align-content: flex-end;
@@ -233,8 +233,19 @@ html {
 
 .dificulty .dificulty-indicator {
   padding: 8px;
-  background-color: orange;
   border-radius: 25px;
+}
+
+.orange {
+  background-color: #FFA500;
+}
+
+.green {
+  background-color: #3C8900;
+}
+
+.red {
+  background-color: #CE4A00;
 }
 
 .dificulty .dificulty-indicator > h3 {
