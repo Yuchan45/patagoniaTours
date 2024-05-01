@@ -93,8 +93,18 @@ html {
   height: 90vh;
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo-overlay > h3 {
+  color: var(--white);
+  font-size: 5rem;
+  font-weight: 800;
+  letter-spacing: -3px;
+  text-align: center;
+  margin-bottom: 10%;
 }
 
 .main-container .logo-overlay img {
@@ -162,7 +172,7 @@ html {
   position: relative;
   background-size: cover;
   width: 50%;
-  height: 450px;
+  height: 400px;
   margin-top: 15px;
 }
 
@@ -261,50 +271,11 @@ html {
 }
 
 .about-us .container > img {
-  width: 500px;
+  width: 80vw;
+  max-width: 500px;
 }
 
-.mission-vision-values {
-  width: 100%;
-  background-color: var(--bg-gray);
-  display: flex;
-  gap: 10px;
-}
 
-.mission-vision-values div {
-  width: 33%;
-  height: 300px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
-  text-align: center;
-  color: white;
-  font-size: 1.2rem;
-}
-
-.mission-vision-values div > p > span {
-  color: #67e5d5;
-}
-
-.mission-vision-values .mission {
-  background-color: #1d62a3;
-}
-
-.mission-vision-values .vision {
-  background-color: #ffa500;
-}
-
-.mission-vision-values .values {
-  background-color: #3e6d31;
-}
-
-.mission-vision-values > p {
-  
-}
 
 .review .section-title {
   margin: 0 0 50px;
@@ -312,8 +283,135 @@ html {
   z-index: 10;
 }
 
+.collage-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.collage-container .top-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 300px;
+  width: 100%;
+  gap: 15px;
+}
+
+.collage-img-1 {
+  background-image: url(../images/general/crampones.jpg);
+  flex-grow: 1;
+  height: 100%;
+  background-size: cover;
+}
+
+.collage-container .top-row .vision {
+  display: flex;
+  /* flex-grow: 1; */
+  background-color: #0A3863;
+  /* max-width: 250px; */
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+  text-align: center;
+  width: 15vw;
+}
+
+.collage-img-2 {
+  background-image: url(../images/destinations/bigIce.jpg);
+  flex-grow: 1;
+  height: 100%;
+  background-size: cover;
+}
 
 
+.collage-container .top-row .vision > p {
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.collage-container .top-row .vision > p > span {
+  color: #00FFF0;
+}
+
+.collage-container .collage-banner {
+  width: 100%;
+}
+
+
+.review {
+  padding: 100px 200px;
+}
+
+.review-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-container .review-item {
+  padding: 40px;
+  background-color: #B9927D;
+  height: 400px;
+  width: 300px;
+  border-radius: 25px;
+  overflow-y: hidden;
+}
+
+.review-container .review-item .reviewer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.review-container .review-item .reviewer > img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.reviewer-info > h3 {
+  color: #0A3863;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.reviewer-info > p {
+  font-weight: 300;
+  font-size: .8rem;
+}
+
+.review-container .review-item .stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.review-container .review-item .stars > img {
+  width: 20px;
+  margin-top: 15px;
+}
+
+.review-container .review-item .review-text {
+  margin: 5px 0 0;
+}
+
+.review-container .review-item .review-text > p {
+  font-size: .9rem;
+  letter-spacing: 0px;
+}
 
 
 
@@ -360,45 +458,39 @@ footer .rigth {
 
 /* Media Queries */
 
-@media only screen and (max-width: 319px) {
-
-}
-
-@media only screen and (min-width: 320px) and (max-width: 479px) {
-
-  .destinations {
-    padding: 50px 25px !important;
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .main-container header ul {
+    display: none;
   }
 
-  .destinations .destinations-grid .item .item-data .dificulty {
-    width: 40%;
+  .main-container header {
+    height: 50px;
   }
-  .destinations .destinations-grid .item .item-data .name {
-    width: 60%;
+
+  .logo-overlay > h3 {
+    font-size: 3rem;
+    margin-bottom: 20%;
+  }
+
+  .section-title > p {
     font-size: .8rem;
   }
 
-  .dificulty .dificulty-indicator {
-    width: 100px;
+  .section-title > h3 {
+    font-size: 1rem;
   }
 
-  .dificulty .dificulty-indicator > h3 {
-    font-size: 0.6rem;
-  }
-}
-
-@media only screen and  (max-width: 768px) {
-  .main-container header ul {
-    width: 50vw;
-  }
-}
-
-@media only screen and (max-width: 1200px)  {
   .destinations {
-    padding: 100px 50px;
+    padding: 50px 15px !important;
+  }
+
+  .destinations .destinations-grid {
+    margin: 0;
   }
 
   .destinations .destinations-grid .item {
+    height: 30vh !important;
+    max-height: 450px;
     position: relative;
     background-size: cover;
     width: 100%;
@@ -406,15 +498,90 @@ footer .rigth {
     margin-top: 15px;
   }
 
+  .destinations .destinations-grid .item .item-data {
+    padding: 0 5px;
+    height: 60px;
+  }
+
+  .dificulty .dificulty-indicator > h3 {
+    font-size: 0.6rem;
+  }
+  
+  .destinations .destinations-grid .item .item-data .dificulty {
+    width: 40%;
+  }
+  .destinations .destinations-grid .item .item-data .name {
+    width: 60%;
+    font-size: .6rem;
+  }
+
+  .dificulty .dificulty-indicator {
+      padding: 4px;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+  }
+
   .about-us {
-    padding: 100px 50px;
+    padding: 50px 15px !important;
+  }
+  
+  .about-us .container {
+    flex-direction: column;
+    gap: 0;
   }
 
-  .mission-vision-values {
-    flex-wrap: wrap;
+  .about-us .container .information > p {
+    text-align: center;
   }
 
-  .mission-vision-values div {
+  .collage-container .top-row {
+    height: 500px;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .collage-img-1 {
+    height: 100%;
     width: 100%;
   }
+
+  .collage-img-2 {
+    display: none;
+  }
+
+  .collage-container .collage-banner {
+    display: none;
+  }
+
+  .collage-container .top-row .vision {
+    padding: 50px;
+    width: 100%;
+  }
+
+  .review {
+    padding: 50px 15px !important;
+  }
+
+  .review-container {
+    flex-direction: column;
+  }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .main-container header ul {
+    width: 50vw;
+  }
+
+  .review {
+    padding: 50px 15px !important;
+  }
+
+  .review-container {
+    flex-direction: column;
+  }
+
+  
+}
+
