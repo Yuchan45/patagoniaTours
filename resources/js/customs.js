@@ -10,11 +10,26 @@ window.onscroll = function () {
   }
 };
 
-/* Selected nav-item */
-// const destinations = document.querySelector('#destinations');
-// const aboutUs = document.querySelector('#aboutUs');
-// const reviews = document.querySelector('#reviews');
+const menuBtn = document.querySelector('#menu');
+const bars = document.querySelector('#bars');
+const closeBtn = document.querySelector('#close');
 
-// destinations.click((e) => {
-//   destinations.classList.add('selected-item');
-// });
+const navUl = document.querySelector('#nav-ul');
+
+let menuOpen = false;
+
+menuBtn.addEventListener('click', function () {
+  if (!menuOpen) {
+    navBar.classList.add('active-menu');
+    bars.classList.remove('active-icon');
+    closeBtn.classList.add('active-icon');
+
+    menuOpen = true;
+  } else {
+    navBar.classList.remove('active-menu');
+    closeBtn.classList.remove('active-icon');
+    bars.classList.add('active-icon');
+
+    menuOpen = false;
+  }
+});
